@@ -8,9 +8,24 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    const origin = request.headers.get("Origin");
+
+    const allowedOrigins = [
+      "https://sujalsubedi.name.np",
+      "http://localhost:3000",
+    ];
+
     const headers = {
-      "Access-Control-Allow-Origin": "https://sujalsubedi.name.np",
+      "Access-Control-Allow-Origin":
+        origin && allowedOrigins.includes(origin)
+          ? origin
+          : "https://sujalsubedi.name.np",
+
       "Access-Control-Allow-Methods": "GET, OPTIONS",
+
+      "Access-Control-Allow-Headers":
+        "Content-Type, Authorization",
+
       "Content-Type": "application/json",
     };
 

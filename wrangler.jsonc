@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "frosty-breeze-66e1",
+	"name": "portfolio-api",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-07-24",
 	"observability": {

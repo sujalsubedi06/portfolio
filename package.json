@@ -1,19 +1,17 @@
 {
-  "name": "frosty-breeze-66e1",
-  "version": "0.0.0",
+  "name": "portfolio-api",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
     "dev": "wrangler dev",
-    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
     "test": "vitest",
     "cf-typegen": "wrangler types"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "^0.12.4",
-    "@types/node": "^26.1.1",
-    "typescript": "^5.5.2",
-    "vitest": "~3.2.0",
-    "wrangler": "^4.114.0"
+    "@cloudflare/workers-types": "^5.20260724.1",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.114.0",
+    "vitest": "^3.2.4"
   }
 }

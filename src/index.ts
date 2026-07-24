@@ -1,18 +1,121 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Bind resources to your worker in `wrangler.jsonc`. After adding bindings, a type definition for the
- * `Env` object can be regenerated with `npm run cf-typegen`.
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+const GITHUB_USERNAME = "sujalsubedi06";
+
+interface Env {
+  GITHUB_TOKEN: string;
+}
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		return new Response("Hello World!");
-	},
-} satisfies ExportedHandler<Env>;
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+
+    const origin = request.headers.get("Origin");
+
+    const allowedOrigins = [
+      "https://sujalsubedi.name.np",
+      "http://localhost:3000",
+    ];
+
+    const headers = {
+      "Access-Control-Allow-Origin": allowedOrigins.includes(origin ?? "")
+        ? origin!
+        : "https://sujalsubedi.name.np",
+      "Access-Control-Allow-Methods": "GET, OPTIONS",
+      "Content-Type": "application/json",
+    };
+
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        headers,
+      });
+    }
+
+    if (url.pathname === "/github/stats") {
+      try {
+        const response = await fetch(
+          "https://api.github.com/graphql",
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+              "Content-Type": "application/json",
+              "User-Agent": "portfolio-api",
+            },
+            body: JSON.stringify({
+              query: `
+                query {
+                  user(login: "${GITHUB_USERNAME}") {
+                    name
+                    login
+                    avatarUrl
+
+                    followers {
+                      totalCount
+                    }
+
+                    repositories(
+                      first: 100,
+                      ownerAffiliations: OWNER
+                    ) {
+                      totalCount
+                    }
+
+                    contributionsCollection {
+                      contributionCalendar {
+                        totalContributions
+                      }
+                    }
+                  }
+                }
+              `,
+            }),
+          }
+        );
+
+        const data = await response.json();
+
+        if (data.errors) {
+          return new Response(
+            JSON.stringify({
+              error: "GitHub API error",
+              details: data.errors,
+            }),
+            {
+              status: 500,
+              headers,
+            }
+          );
+        }
+
+        return new Response(
+          JSON.stringify(data.data.user),
+          {
+            headers: {
+              ...headers,
+              "Cache-Control": "public, max-age=3600",
+            },
+          }
+        );
+
+      } catch (error) {
+        return new Response(
+          JSON.stringify({
+            error: String(error),
+          }),
+          {
+            status: 500,
+            headers,
+          }
+        );
+      }
+    }
+
+    return new Response(
+      JSON.stringify({
+        message: "Portfolio API running",
+      }),
+      {
+        headers,
+      }
+    );
+  },
+};

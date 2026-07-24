@@ -8,25 +8,14 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    const origin = request.headers.get("Origin");
-
-    const allowedOrigins = [
-      "https://sujalsubedi.name.np",
-      "http://localhost:3000",
-    ];
-
     const headers = {
-      "Access-Control-Allow-Origin": allowedOrigins.includes(origin ?? "")
-        ? origin!
-        : "https://sujalsubedi.name.np",
+      "Access-Control-Allow-Origin": "https://sujalsubedi.name.np",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Content-Type": "application/json",
     };
 
     if (request.method === "OPTIONS") {
-      return new Response(null, {
-        headers,
-      });
+      return new Response(null, { headers });
     }
 
     if (url.pathname === "/github/stats") {
@@ -44,24 +33,49 @@ export default {
               query: `
                 query {
                   user(login: "${GITHUB_USERNAME}") {
-                    name
                     login
+                    name
                     avatarUrl
+                    bio
+                    url
 
                     followers {
                       totalCount
                     }
 
+                    following {
+                      totalCount
+                    }
+
                     repositories(
-                      first: 100,
+                      first: 100
                       ownerAffiliations: OWNER
+                      orderBy: {
+                        field: STARGAZERS
+                        direction: DESC
+                      }
                     ) {
                       totalCount
+                      nodes {
+                        name
+                        stargazerCount
+                        primaryLanguage {
+                          name
+                          color
+                        }
+                      }
                     }
 
                     contributionsCollection {
                       contributionCalendar {
                         totalContributions
+                        weeks {
+                          contributionDays {
+                            contributionCount
+                            date
+                            contributionLevel
+                          }
+                        }
                       }
                     }
                   }
@@ -73,14 +87,14 @@ export default {
 
         const data = await response.json();
 
-        if (data.errors) {
+        if (!response.ok) {
           return new Response(
             JSON.stringify({
-              error: "GitHub API error",
-              details: data.errors,
+              error: "GitHub API request failed",
+              details: data,
             }),
             {
-              status: 500,
+              status: response.status,
               headers,
             }
           );
@@ -89,17 +103,16 @@ export default {
         return new Response(
           JSON.stringify(data.data.user),
           {
-            headers: {
-              ...headers,
-              "Cache-Control": "public, max-age=3600",
-            },
+            headers,
           }
         );
 
       } catch (error) {
         return new Response(
           JSON.stringify({
-            error: String(error),
+            error: error instanceof Error
+              ? error.message
+              : "Unknown error",
           }),
           {
             status: 500,

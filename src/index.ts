@@ -56,9 +56,11 @@ export default {
                       }
                     ) {
                       totalCount
+
                       nodes {
                         name
                         stargazerCount
+
                         primaryLanguage {
                           name
                           color
@@ -69,6 +71,7 @@ export default {
                     contributionsCollection {
                       contributionCalendar {
                         totalContributions
+
                         weeks {
                           contributionDays {
                             contributionCount
@@ -101,7 +104,9 @@ export default {
         }
 
         return new Response(
-          JSON.stringify(data.data.user),
+          JSON.stringify({
+            user: data.data.user,
+          }),
           {
             headers,
           }
@@ -110,9 +115,10 @@ export default {
       } catch (error) {
         return new Response(
           JSON.stringify({
-            error: error instanceof Error
-              ? error.message
-              : "Unknown error",
+            error:
+              error instanceof Error
+                ? error.message
+                : "Unknown error",
           }),
           {
             status: 500,

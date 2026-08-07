@@ -1,6 +1,22 @@
 export const CONTACT_CONTENT = {
-  heading: "Let's build something meaningful together.",
-
   subtext:
-    "I'm open to discussing new opportunities, collaborations or interesting projects.",
+    "Have a project in mind? Let's collaborate and build something meaningful.",
 };
+
+export const CONTACT_CHANNELS = [
+  {
+    label: "Email",
+    href: "mailto:sujalsubedi06@gmail.com",
+    icon: "mail",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/sujalsubedi06",
+    icon: "github",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/sujalsubedi06",
+    icon: "linkedin",
+  },
+];

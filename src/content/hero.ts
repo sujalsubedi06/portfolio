@@ -1,33 +1,33 @@
 export const HERO_CONTENT = {
   eyebrow: [
     "Cybersecurity Student",
-    "Builder",
+    "Software Engineer",
     "Problem Solver",
   ],
 
   subtext:
-    "I build secure, scalable and intelligent solutions with focus on cloud, automation, and AI.",
+    "I'm Sujal Subedi, a cybersecurity student and software engineer passionate about building secure, scalable, and intelligent software. I enjoy solving real-world problems through cybersecurity, cloud computing, automation, artificial intelligence, and modern software engineering.",
 
-  stats: [
+  highlights: [
     {
-      label: "Projects",
-      value: "6+",
-      caption: "In Progress",
+      title: "Focus",
+      value: "Cybersecurity",
+      caption: "Building secure systems and strengthening digital resilience.",
     },
     {
-      label: "Years Learning",
-      value: "2+",
-      caption: "Cybersecurity & Cloud",
+      title: "Currently Learning",
+      value: "Cloud & AI",
+      caption: "Exploring cloud platforms, automation, and AI-driven solutions.",
     },
     {
-      label: "Commits",
-      value: "100+",
-      caption: "On GitHub",
+      title: "Learning",
+      value: "Hands-on Projects",
+      caption: "Growing through practical software development and continuous improvement.",
     },
     {
-      label: "Certifications",
-      value: "10+",
-      caption: "Completed",
+      title: "Availability",
+      value: "Open to Opportunities",
+      caption: "Interested in internships, collaborations, and meaningful projects.",
     },
   ],
-};
+} as const;

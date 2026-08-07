@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
-import { CONTACT_CONTENT, CONTACT_CHANNELS } from "@/data/contact";
+import { CONTACT_CONTENT, CONTACT_CHANNELS } from "@/content/contact";
 import { TextReveal } from "@/components/motion/TextReveal";
 import { RevealItem } from "@/components/motion/RevealItem";
 import { ClipReveal } from "@/components/motion/ClipReveal";

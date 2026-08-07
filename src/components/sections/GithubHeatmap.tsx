@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { GITHUB_MONTHS } from "@/data/journey";
+import { GITHUB_MONTHS } from "@/content/journey";
 import { cn } from "@/lib/utils";
 
 const WEEKS = 46;

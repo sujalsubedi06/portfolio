@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
-import { FOOTER_CONTENT } from "@/data/contact";
+import { FOOTER_CONTENT } from "@/content/contact";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { SPRING } from "@/lib/motion/easings";
 

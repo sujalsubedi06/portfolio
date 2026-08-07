@@ -1,7 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { TECH_STACK_CONTENT, TECH_CATEGORIES } from "@/data/techstack";
+import { TECH_STACK_CONTENT, TECH_CATEGORIES } from "@/content/techstack";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Card } from "@/components/ui/Card";

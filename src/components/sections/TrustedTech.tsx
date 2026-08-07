@@ -11,7 +11,7 @@ import {
   Leaf,
   type LucideIcon,
 } from "lucide-react";
-import { TRUSTED_TECH } from "@/data/site";
+import { TRUSTED_TECH } from "@/content/site";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { SPRING, cascade } from "@/lib/motion/easings";
 

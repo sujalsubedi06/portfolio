@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import { NAV_LINKS } from "@/data/site";
+import { NAV_LINKS } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { useScrollSpy } from "@/lib/useScrollSpy";

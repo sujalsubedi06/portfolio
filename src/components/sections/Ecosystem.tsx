@@ -1,7 +1,7 @@
 "use client";
 
 import { Shield, Sparkles, Cloud, Ticket, Sparkle } from "lucide-react";
-import { ECOSYSTEM_CONTENT, ECOSYSTEM_PRODUCTS } from "@/data/ecosystem";
+import { ECOSYSTEM_CONTENT, ECOSYSTEM_PRODUCTS } from "@/content/ecosystem";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Card } from "@/components/ui/Card";

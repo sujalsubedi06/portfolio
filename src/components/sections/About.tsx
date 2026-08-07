@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Box, ShieldCheck, Code2, Award } from "lucide-react";
-import { ABOUT_CONTENT, STATS } from "@/data/about";
+import { ABOUT_CONTENT, STATS } from "@/content/about";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Card } from "@/components/ui/Card";

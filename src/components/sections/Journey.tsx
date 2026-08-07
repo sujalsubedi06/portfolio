@@ -8,7 +8,7 @@ import {
   CERTIFICATIONS,
   CURRENTLY_LEARNING,
   GITHUB_STATS,
-} from "@/data/journey";
+} from "@/content/journey";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Card } from "@/components/ui/Card";

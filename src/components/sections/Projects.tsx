@@ -2,7 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/BrandIcons";
-import { PROJECTS_CONTENT, PROJECTS } from "@/data/projects";
+import { PROJECTS_CONTENT, PROJECTS } from "@/content/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Card } from "@/components/ui/Card";

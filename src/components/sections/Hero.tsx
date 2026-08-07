@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { TrustedTech } from "@/components/sections/TrustedTech";
 import { TextReveal } from "@/components/motion/TextReveal";
@@ -12,6 +12,7 @@ import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { useSpotlight } from "@/lib/motion/useSpotlight";
 import { SPRING } from "@/lib/motion/easings";
 import { HERO_CONTENT } from "@/data/site";
+import Image from "next/image";
 
 export function Hero() {
   const { ref: spotlightRef, onPointerMove, onPointerLeave } = useSpotlight<HTMLElement>();
@@ -139,14 +140,16 @@ export function Hero() {
 
           <ClipReveal direction="up" delay={0.2} className="h-full w-full">
             <TiltCard max={7} className="h-full w-full">
-              {/*
-                Replace this placeholder with a real portrait once available:
-                <Image src="/images/hero-portrait.jpg" alt="Portrait of Sujal Subedi" fill
-                  className="object-cover rounded-3xl" priority />
-              */}
-              <div className="flex h-full w-full items-center justify-center rounded-3xl border border-[var(--color-border)] bg-gradient-to-b from-[var(--color-bg-elevated)] to-[var(--color-bg)]">
-                <User size={72} className="text-[var(--color-text-faint)]" aria-hidden="true" />
-                <span className="sr-only">Portrait placeholder — add hero photo</span>
+              <div className="relative h-full w-full overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+                <Image
+                  src="/images/hero/portrait.webp"
+                  alt="Portrait of Sujal Subedi"
+                  fill
+                  priority
+                  quality={100}
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 480px"
+                />
               </div>
             </TiltCard>
           </ClipReveal>

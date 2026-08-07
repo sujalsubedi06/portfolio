@@ -8,6 +8,7 @@ import { NAV_LINKS } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "@/components/motion/Magnetic";
 import { useScrollSpy } from "@/lib/useScrollSpy";
+import Image from "next/image";
 
 const NAV_HREFS = NAV_LINKS.map((link) => link.href);
 
@@ -36,9 +37,16 @@ export function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10"
       >
         <Link href="#home" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--color-border)] text-xs font-semibold tracking-wide">
-            SS
-          </span>
+          <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+            <Image
+              src="/icons/logo.png"
+              alt="Sujal Subedi Logo"
+              fill
+              priority
+              className="object-cover"
+              sizes="40px"
+            />
+          </div>
           <span className="text-[15px] font-semibold text-[var(--color-text)]">
             Sujal Subedi
           </span>

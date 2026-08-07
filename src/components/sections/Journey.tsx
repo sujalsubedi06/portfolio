@@ -17,6 +17,7 @@ import { RevealItem } from "@/components/motion/RevealItem";
 import { CountUp } from "@/components/motion/CountUp";
 import { GithubHeatmap } from "@/components/sections/GithubHeatmap";
 import { useGithub } from "@/hooks/useGithub";
+import { calculateLongestStreak } from "@/lib/github-streak";
 
 export function Journey() {
   const { data } = useGithub();
@@ -29,6 +30,10 @@ export function Journey() {
     0
   );
 
+  const longestStreak = calculateLongestStreak(
+    data?.user.contributionsCollection.contributionCalendar.weeks ?? []
+  );
+
   const githubStats = [
     {
       label: "Total Contributions",
@@ -38,7 +43,7 @@ export function Journey() {
     },
     {
       label: "Longest Streak",
-      value: "—",
+      value: `${longestStreak} days`,
     },
     {
       label: "Repositories",

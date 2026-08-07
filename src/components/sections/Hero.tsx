@@ -11,7 +11,7 @@ import { AmbientGlow } from "@/components/motion/AmbientGlow";
 import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { useSpotlight } from "@/lib/motion/useSpotlight";
 import { SPRING } from "@/lib/motion/easings";
-import { HERO_CONTENT } from "@/content/site";
+import { HERO_CONTENT } from "@/content/hero";
 import Image from "next/image";
 
 export function Hero() {

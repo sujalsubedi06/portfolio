@@ -1,0 +1,16 @@
+{
+  "name": "Sujal Subedi — Portfolio",
+  "short_name": "Sujal Subedi",
+  "description": "CyberSecurity student, cybersecurity enthusiast, and software developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0C0C",
+  "theme_color": "#0C0C0C",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

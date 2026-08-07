@@ -49,7 +49,7 @@ export function Contact() {
 
             <ul className="mt-8 space-y-3" role="list">
               {CONTACT_CHANNELS.map((channel, index) => {
-                const Icon = ICON_MAP[channel.icon];
+                const Icon = ICON_MAP[channel.icon as keyof typeof ICON_MAP];
                 return (
                   <RevealItem key={channel.label} index={index} direction="left" staggerBase={0.06}>
                     <Magnetic strength={0.2} max={5} hoverScale={1.0}>

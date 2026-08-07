@@ -2,27 +2,45 @@ import type { StatItem } from "@/types";
 
 export const ABOUT_CONTENT = {
   eyebrow: "About Me",
+
+  heading: "Learning by Building.",
+
   paragraphs: [
-    "I'm a cybersecurity student passionate about building products that create real impact.",
-    "I love turning complex ideas into simple, useful and secure solutions.",
+    "I'm Sujal Subedi, a second-year Information Technology student from Nepal with a strong interest in cybersecurity, software engineering, cloud computing, and artificial intelligence.",
+
+    "I enjoy building practical projects that strengthen my technical skills while creating secure, scalable, and meaningful software.",
   ],
-  linkLabel: "Know more about me",
+
+  quote:
+    "I believe the best engineers never stop learning, building, and improving.",
+
+  linkLabel: "Let's Connect",
   linkHref: "#contact",
-};
+} as const;
 
 export const STATS: StatItem[] = [
-  { icon: "box", value: "6+", label: "Projects", caption: "In Progress" },
   {
     icon: "shield",
-    value: "2+",
-    label: "Years Learning",
-    caption: "Cybersecurity & Cloud",
+    value: "Security",
+    label: "Primary Focus",
+    caption: "Building secure software with security-first principles.",
   },
-  { icon: "code", value: "100+", label: "Commits", caption: "On GitHub" },
+  {
+    icon: "code",
+    value: "Development",
+    label: "Core Skill",
+    caption: "Building modern, scalable, and maintainable applications.",
+  },
+  {
+    icon: "box",
+    value: "Cloud & AI",
+    label: "Currently Learning",
+    caption: "Expanding my skills through practical projects.",
+  },
   {
     icon: "certificate",
-    value: "10+",
-    label: "Certifications",
-    caption: "Completed",
+    value: "Growth",
+    label: "Mindset",
+    caption: "Always learning and improving every day.",
   },
 ];

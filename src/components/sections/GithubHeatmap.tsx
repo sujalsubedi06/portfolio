@@ -1,28 +1,17 @@
 "use client";
 
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { GITHUB_MONTHS } from "@/content/journey";
-import { cn } from "@/lib/utils";
 import { useGithub } from "@/hooks/useGithub";
 
-const LEVEL_OPACITY = [0.08, 0.28, 0.5, 0.72, 1];
-
-const LEVEL_MAP = {
-  NONE: 0,
-  FIRST_QUARTILE: 1,
-  SECOND_QUARTILE: 2,
-  THIRD_QUARTILE: 3,
-  FOURTH_QUARTILE: 4,
-};
+function getColor(count: number) {
+  if (count === 0) return "#161b22";
+  if (count <= 2) return "#0e4429";
+  if (count <= 5) return "#006d32";
+  if (count <= 9) return "#26a641";
+  return "#39d353";
+}
 
 export function GithubHeatmap() {
-  const gridRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(gridRef, {
-    once: true,
-    margin: "-10%",
-  });
-
   const { data, loading } = useGithub();
 
   const weeks =
@@ -30,75 +19,56 @@ export function GithubHeatmap() {
 
   if (loading) {
     return (
-      <div className="grid gap-[3px] opacity-50">
+      <p className="text-xs text-[var(--color-text-faint)]">
         Loading GitHub activity...
-      </div>
+      </p>
     );
   }
 
   return (
-    <div>
-      <div className="mb-1.5 hidden justify-between px-0.5 text-[10px] text-[var(--color-text-faint)] sm:flex">
+    <div className="w-full overflow-hidden">
+      <div className="mb-2 hidden justify-between text-[10px] text-[var(--color-text-faint)] sm:flex">
         {GITHUB_MONTHS.map((month) => (
           <span key={month}>{month}</span>
         ))}
       </div>
 
-      <div
-        ref={gridRef}
-        className={cn(
-          "grid gap-[3px]",
-          isInView && "is-revealed"
-        )}
-        style={{
-          gridTemplateColumns: `repeat(${weeks.length}, minmax(0, 1fr))`,
-        }}
-        role="img"
-        aria-label="GitHub contribution activity over the past year"
-      >
+      <div className="flex w-full justify-between gap-[2px]">
         {weeks.map((week, weekIndex) => (
           <div
             key={weekIndex}
-            className="grid gap-[3px]"
-            style={{
-              gridTemplateRows:
-                "repeat(7, minmax(0, 1fr))",
-            }}
+            className="flex flex-1 flex-col gap-[2px]"
           >
-            {week.contributionDays.map((day) => {
-              const level =
-                LEVEL_MAP[day.contributionLevel];
-
-              return (
-                <span
-                  key={day.date}
-                  title={`${day.contributionCount} contributions on ${day.date}`}
-                  className="heatmap-cell aspect-square rounded-[2px] bg-[var(--color-success)]"
-                  style={
-                    {
-                      "--cell-opacity":
-                        LEVEL_OPACITY[level],
-                    } as React.CSSProperties
-                  }
-                />
-              );
-            })}
+            {week.contributionDays.map((day) => (
+              <span
+                key={day.date}
+                title={`${day.date}: ${day.contributionCount} contributions`}
+                className="aspect-square w-full rounded-[1px]"
+                style={{
+                  backgroundColor: getColor(
+                    day.contributionCount
+                  ),
+                }}
+              />
+            ))}
           </div>
         ))}
       </div>
 
       <div className="mt-3 flex items-center justify-end gap-1.5 text-[10px] text-[var(--color-text-faint)]">
-        Less
+        <span>Less</span>
 
-        {LEVEL_OPACITY.map((opacity) => (
+        {[1, 2, 3, 4].map((level) => (
           <span
-            key={opacity}
-            className="h-2.5 w-2.5 rounded-[2px] bg-[var(--color-success)]"
-            style={{ opacity }}
+            key={level}
+            className="h-2.5 w-2.5 rounded-[2px]"
+            style={{
+              backgroundColor: getColor(level * 3),
+            }}
           />
         ))}
 
-        More
+        <span>More</span>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 import { NAV_LINKS } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { Magnetic } from "@/components/motion/Magnetic";
-import { useScrollSpy } from "@/lib/useScrollSpy";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import Image from "next/image";
 
 const NAV_HREFS = NAV_LINKS.map((link) => link.href);

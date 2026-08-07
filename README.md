@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sujal Subedi — Cybersecurity & Technology Portfolio
 
 <p align="center">
@@ -157,38 +158,198 @@ src/
 ├── hooks/            # Custom React hooks
 ├── lib/              # Utilities and integrations
 └── styles/           # Global styles
+=======
+# 👋 Sujal Subedi — Personal Portfolio
+
+A modern, immersive developer portfolio showcasing my projects, skills, and passion for **cybersecurity**, **software development**, and building exceptional digital experiences.
+
+Built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+
+🌐 **Live Website:** https://sujalsubedi.name.np
+
+---
+
+## ✨ Features
+
+- 🎨 Modern dark UI with a premium futuristic aesthetic
+- 💜 Interactive cursor glow
+- 🖼️ Interactive 3D hero portrait
+- ✨ Smooth animations powered by Framer Motion
+- 📱 Fully responsive across desktop, tablet, and mobile
+- ⚡ Fast and optimized with Vite
+- 🌙 Premium glassmorphism effects
+- ♿ Accessibility-focused design
+- 🔍 SEO optimized
+- 🚀 Production-ready architecture
+
+---
+
+# 🎨 Design Language
+
+Inspired by modern developer tools, terminal interfaces, and cybersecurity aesthetics.
+
+### Highlights
+
+- Terminal-inspired branding
+- Command-line section headers
+- Interactive lighting effects
+- Premium dark theme
+- Glassmorphism UI
+- Smooth micro-interactions
+- Clean and modern layouts
+
+---
+
+## 🎨 Color Palette
+
+| Color | Hex |
+|--------|------|
+| Background | `#0C0C0C` |
+| Surface | `#151515` |
+| Primary Text | `#FFFFFF` |
+| Secondary Text | `#D7E2EA` |
+| Purple Accent | `#A855F7` |
+| Blue Accent | `#3B82F6` |
+| Orange Accent | `#F97316` |
+
+---
+
+## ✍ Typography
+
+- **Kanit**
+- **JetBrains Mono**
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+### Animation
+
+- Framer Motion
+
+### Icons
+
+- Lucide React
+
+### Tooling
+
+- ESLint
+- npm
+
+---
+
+# 📂 Project Structure
+
+```text
+src/
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+│
+├── data/
+├── hooks/
+├── pages/
+├── styles/
+├── types/
+├── utils/
+│
+├── App.tsx
+└── main.tsx
+
+public/
+├── favicon.png
+├── manifest.webmanifest
+├── robots.txt
+└── resume.pdf
+>>>>>>> b7a93ce (feat: initial portfolio release)
 ```
 
 ---
 
+<<<<<<< HEAD
 # Getting Started
 
 ## Clone Repository
+=======
+# 🚀 Getting Started
+
+Clone the repository
+>>>>>>> b7a93ce (feat: initial portfolio release)
 
 ```bash
 git clone https://github.com/sujalsubedi06/portfolio.git
 ```
 
+<<<<<<< HEAD
 ## Install Dependencies
+=======
+Navigate to the project
+
+```bash
+cd portfolio
+```
+
+Install dependencies
+>>>>>>> b7a93ce (feat: initial portfolio release)
 
 ```bash
 npm install
 ```
 
+<<<<<<< HEAD
 ## Run Development Server
+=======
+Run the development server
+>>>>>>> b7a93ce (feat: initial portfolio release)
 
 ```bash
 npm run dev
 ```
 
+<<<<<<< HEAD
 Open:
 
 ```text
 http://localhost:3000
+=======
+---
+
+# 📦 Build
+
+Create a production build
+
+```bash
+npm run build
+```
+
+Preview the production build
+
+```bash
+npm run preview
+```
+
+Run ESLint
+
+```bash
+npm run lint
+>>>>>>> b7a93ce (feat: initial portfolio release)
 ```
 
 ---
 
+<<<<<<< HEAD
 # Available Commands
 
 | Command | Description |
@@ -248,3 +409,83 @@ https://github.com/sujalsubedi06
 This repository is publicly available for educational and technical reference.
 
 Design, branding, and personal content remain the property of Sujal Subedi.
+=======
+# 🌟 Highlights
+
+- Interactive Hero Section
+- 3D Animated Portrait
+- Custom Cursor Glow
+- Smooth Scroll Animations
+- Responsive Navigation
+- Downloadable Resume
+- Glassmorphism Components
+- Beautiful Hover Effects
+- Optimized Performance
+- SEO Friendly
+
+---
+
+# 📸 Preview
+
+> Homepage Preview
+
+![Portfolio Preview](./public/preview.png)
+
+---
+
+# 🎯 Purpose
+
+This portfolio was built to:
+
+- Showcase my projects and technical skills
+- Demonstrate modern frontend development
+- Highlight my cybersecurity journey
+- Present my work with a polished user experience
+- Continuously evolve as I learn and build new technologies
+
+---
+
+# 📈 Performance Goals
+
+- ⚡ Fast page loads
+- 📱 Responsive on all devices
+- ♿ Accessibility compliant
+- 🔍 SEO optimized
+- 🚀 High Lighthouse scores
+
+---
+
+# 📬 Connect With Me
+
+🌐 **Website**  
+https://sujalsubedi.name.np
+
+🐙 **GitHub**  
+https://github.com/sujalsubedi06
+
+💼 **LinkedIn**  
+https://www.linkedin.com/in/sujalsubedi06/
+
+📧 **Email**  
+sujal.subedi96@gmail.com
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project interesting, consider giving it a star!
+
+**Designed & Developed by Sujal Subedi**
+
+Made with ❤️ using React, TypeScript, Tailwind CSS, Framer Motion & Vite.
+
+</div>
+>>>>>>> b7a93ce (feat: initial portfolio release)

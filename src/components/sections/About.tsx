@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { motion } from "framer-motion";
@@ -112,3 +113,94 @@ export function About() {
     </section>
   );
 }
+=======
+import { motion } from 'framer-motion';
+import { MapPin, GraduationCap, Sparkles } from 'lucide-react';
+import { aboutBio, aboutInterests } from '@/data/personal';
+import { locationLabel } from '@/data/socials';
+import { education } from '@/data/education';
+import { SectionTitle } from '@/components/ui/SectionTitle';
+import { GlassCard } from '@/components/ui/Card';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 28, scale: 0.96 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+};
+
+export function About() {
+  const primaryEducation = education[0];
+
+  return (
+    <section id="about" className="relative px-5 py-section-mobile-lg sm:px-8 md:px-10 md:py-section-desktop-lg">
+      <div className="mx-auto max-w-container">
+        <SectionTitle index="01" command="~/about $ whoami" title="About" />
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '50px' }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          className="max-w-2xl text-secondary/90"
+          style={{ fontSize: 'clamp(1.05rem, 2vw, 1.4rem)' }}
+        >
+          {aboutBio}
+        </motion.p>
+
+        <div className="mt-12 grid gap-5 md:mt-16 md:grid-cols-3">
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '50px' }}
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <GlassCard hoverGlow className="h-full">
+              <MapPin className="text-purple-soft" size={22} />
+              <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted">Location</p>
+              <p className="mt-2 font-display text-2xl font-medium text-primary">{locationLabel} 🇳🇵</p>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '50px' }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <GlassCard hoverGlow className="h-full">
+              <GraduationCap className="text-blue-soft" size={22} />
+              <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted">Education</p>
+              <p className="mt-2 font-display text-xl font-medium text-primary">{primaryEducation.degree}</p>
+              <p className="mt-1 text-sm text-secondary/80">{primaryEducation.institution}</p>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '50px' }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <GlassCard hoverGlow className="h-full">
+              <Sparkles className="text-orange-soft" size={22} />
+              <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted">Interests</p>
+              <ul className="mt-2 flex flex-wrap gap-2">
+                {aboutInterests.map((interest) => (
+                  <li
+                    key={interest}
+                    className="rounded-full border border-border px-3 py-1 text-xs text-secondary/90"
+                  >
+                    {interest}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> b7a93ce (feat: initial portfolio release)

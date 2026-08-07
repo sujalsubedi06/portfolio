@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ProjectStatus = "In Progress" | "Live" | "Completed";
 
 export interface StatItem {
@@ -49,3 +50,73 @@ export interface ContactChannel {
   label: string;
   href: string;
 }
+=======
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface SocialLink {
+  label: string;
+  href: string;
+  icon: 'github' | 'linkedin' | 'mail' | 'file-text' | 'map-pin';
+}
+
+export interface PersonalInfo {
+  name: string;
+  greeting: string;
+  title: string;
+  taglineParts: string[];
+  introduction: string;
+  location: string;
+  resumeUrl: string;
+}
+
+export type ProjectStatus = 'Featured' | 'Upcoming' | 'Learning';
+
+export interface Project {
+  id: string;
+  number: string;
+  title: string;
+  status: ProjectStatus;
+  description: string;
+  technologies: string[];
+  liveUrl?: string;
+  repoUrl?: string;
+}
+
+export type SkillCategory =
+  | 'Programming'
+  | 'Frontend'
+  | 'Backend'
+  | 'Cybersecurity'
+  | 'Tools';
+
+export interface Skill {
+  name: string;
+  category: SkillCategory;
+}
+
+export interface EducationEntry {
+  id: string;
+  institution: string;
+  degree: string;
+  period: string;
+  description?: string;
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  organization: string;
+  date: string;
+  credentialUrl?: string;
+}
+
+export interface SeoConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  url: string;
+}
+>>>>>>> b7a93ce (feat: initial portfolio release)

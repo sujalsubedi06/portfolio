@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { ExternalLink } from "lucide-react";
@@ -88,6 +89,28 @@ export function Projects() {
           ))}
         </div>
       </SectionContainer>
+=======
+import { projects } from '@/data/projects';
+import { SectionTitle } from '@/components/ui/SectionTitle';
+import { ProjectCard } from './ProjectCard';
+
+export function Projects() {
+  return (
+    <section
+      id="projects"
+      className="relative -mt-10 rounded-t-[40px] bg-bg px-5 pb-section-mobile-lg pt-section-mobile-lg sm:-mt-12 sm:rounded-t-[50px] sm:px-8 md:-mt-14 md:rounded-t-[60px] md:px-10 md:pb-section-desktop-lg md:pt-section-desktop-lg"
+      style={{ zIndex: 10 }}
+    >
+      <div className="mx-auto max-w-container">
+        <SectionTitle index="03" command="~/projects $ git log --oneline" title="Project" />
+
+        <div className="flex flex-col gap-6">
+          {projects.map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i} totalCards={projects.length} />
+          ))}
+        </div>
+      </div>
+>>>>>>> b7a93ce (feat: initial portfolio release)
     </section>
   );
 }

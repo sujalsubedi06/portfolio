@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { motion } from "framer-motion";
@@ -65,10 +66,61 @@ export function Hero() {
                   </span>
                 )}
                 {word}
+=======
+import { motion } from 'framer-motion';
+import { ArrowRight, Download, ChevronDown } from 'lucide-react';
+import { personal } from '@/data/personal';
+import { Button } from '@/components/ui/Button';
+import { HeroBackground } from './HeroBackground';
+import { HeroPortrait } from './HeroPortrait';
+
+export function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5 pt-32 sm:px-8 md:px-10"
+    >
+      <HeroBackground />
+
+      <div className="relative z-10 mx-auto grid w-full max-w-container items-center gap-16 md:grid-cols-[1.15fr_0.85fr] md:gap-8">
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            className="mb-5 font-mono text-sm uppercase tracking-[0.3em] text-purple-soft"
+          >
+            {personal.greeting}
+          </motion.p>
+
+          <div className="overflow-hidden">
+            <motion.h1
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.85, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+              className="text-signal font-display font-black uppercase leading-[0.9] tracking-tight"
+              style={{ fontSize: 'clamp(2.75rem, 10vw, 7.5rem)' }}
+            >
+              {personal.name}
+            </motion.h1>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-sm uppercase tracking-widest text-secondary sm:text-base"
+          >
+            {personal.taglineParts.map((part, i) => (
+              <span key={part} className="flex items-center gap-3">
+                {i > 0 && <span className="text-purple">•</span>}
+                {part}
+>>>>>>> b7a93ce (feat: initial portfolio release)
               </span>
             ))}
           </motion.p>
 
+<<<<<<< HEAD
           <TextReveal
             as="h1"
             delay={0.15}
@@ -155,6 +207,58 @@ export function Hero() {
           </ClipReveal>
         </div>
       </div>
+=======
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+            className="mt-6 max-w-lg text-secondary/80"
+            style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.15rem)' }}
+          >
+            {personal.introduction}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <Button
+              variant="primary"
+              href="#contact"
+              icon={<ArrowRight size={16} />}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Get In Touch
+            </Button>
+            <Button variant="glass" href={personal.resumeUrl} icon={<Download size={16} />} download>
+              Download Resume
+            </Button>
+          </motion.div>
+        </div>
+
+        <HeroPortrait />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        className="relative z-10 mx-auto mt-16 flex flex-col items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted"
+      >
+        <span>Scroll</span>
+        <motion.span
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ChevronDown size={16} />
+        </motion.span>
+      </motion.div>
+>>>>>>> b7a93ce (feat: initial portfolio release)
     </section>
   );
 }

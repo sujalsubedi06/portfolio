@@ -6,7 +6,7 @@ export const CONTACT_CONTENT = {
 export const CONTACT_CHANNELS = [
   {
     label: "Email",
-    href: "mailto:sujalsubedi06@gmail.com",
+    href: "mailto:sujalsubedi96@gmail.com",
     icon: "mail",
   },
   {

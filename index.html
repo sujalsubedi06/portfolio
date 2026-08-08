@@ -3,41 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== Primary SEO ===== -->
 <title>Sujal Subedi — Building Digital Experiences</title>
+<meta name="description" content="Sujal Subedi is a software developer and cybersecurity student based in Kathmandu, Nepal, building secure, modern, and thoughtful digital experiences.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Sujal Subedi">
+<link rel="canonical" href="https://sujalsubedi.name.np/">
+<!-- Google Search Console: once you verify ownership, paste the provided
+     meta tag here, e.g.
+     <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
+
+
+<!-- ===== Open Graph ===== -->
+<meta property="og:title" content="Sujal Subedi — Building Digital Experiences">
+<meta property="og:description" content="Sujal Subedi is a software developer and cybersecurity student based in Kathmandu, Nepal, building secure, modern, and thoughtful digital experiences.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sujalsubedi.name.np/">
+<meta property="og:image" content="YOUR_OG_IMAGE_URL">
+<meta property="og:image:alt" content="Sujal Subedi — software developer and cybersecurity student portfolio">
+<meta property="og:site_name" content="Sujal Subedi Portfolio">
+<meta property="og:locale" content="en_US">
+
+<!-- ===== Twitter / X ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sujal Subedi — Building Digital Experiences">
+<meta name="twitter:description" content="Sujal Subedi is a software developer and cybersecurity student based in Kathmandu, Nepal, building secure, modern, and thoughtful digital experiences.">
+<meta name="twitter:image" content="YOUR_OG_IMAGE_URL">
+
+<!-- ===== Favicons / Web App Icons ===== -->
+<link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#131210">
+
+<!-- ===== Fonts ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- ===== Structured Data (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sujalsubedi.name.np/#person",
+      "name": "Sujal Subedi",
+      "url": "https://sujalsubedi.name.np/",
+      "email": "mailto:hello@sujalsubedi.name.np",
+      "jobTitle": "Software Developer & Cybersecurity Student",
+      "description": "Software developer and cybersecurity student building secure, modern, and thoughtful digital experiences.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressCountry": "NP"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/sujalsubedi"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sujalsubedi.name.np/#website",
+      "url": "https://sujalsubedi.name.np/",
+      "name": "Sujal Subedi Portfolio",
+      "description": "Sujal Subedi is a software developer and cybersecurity student based in Kathmandu, Nepal, building secure, modern, and thoughtful digital experiences.",
+      "publisher": { "@id": "https://sujalsubedi.name.np/#person" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <button class="logo" id="logo-btn" aria-label="Go to home">
-      <span class="dot"></span>SUJAL
-    </button>
-    <div class="nav-deco" aria-hidden="true"></div>
-    <div class="nav-cta-wrap">
-      <button class="nav-cta" data-nav="connect">
-        <span class="u">LET'S TALK</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header>
+  <nav class="navbar" id="navbar" aria-label="Primary">
+    <div class="nav-inner">
+      <button class="logo" id="logo-btn" aria-label="Go to home">
+        <span class="dot" aria-hidden="true"></span>SUJAL
       </button>
+      <div class="nav-deco" aria-hidden="true"></div>
+      <div class="nav-cta-wrap">
+        <button class="nav-cta" data-nav="connect">
+          <span class="u">LET'S TALK</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <div id="transition-overlay" aria-hidden="true"></div>
 
-<main id="app">
+<main id="main-content">
 
   <!-- ============ HOME ============ -->
-  <section class="page" id="home">
+  <section class="page" id="home" aria-labelledby="home-h1">
     <div class="wrap">
       <div class="hero">
         <div class="hero-text">
-          <p class="eyebrow"><span class="dot"></span>HELLO, I'M SUJAL</p>
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>HELLO, I'M SUJAL</p>
           <h1 class="headline" id="home-h1" tabindex="-1">
             <span class="ln" data-ln="1">BUILDING</span>
             <span class="ln accent" data-ln="2">DIGITAL</span>
@@ -46,18 +120,19 @@
           <p class="sub">I'm Sujal Subedi, a software developer and cybersecurity student passionate about building secure, modern, and thoughtful digital experiences.</p>
           <button class="btn-primary" data-nav="connect">
             LET'S TALK
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg>
           </button>
         </div>
         <div class="hero-geo" aria-hidden="true"></div>
       </div>
 
-      <div class="tech-strip">
-        <div class="tech-row"><span>NEXT.JS</span><div class="t-right"><span class="t-dot" style="background:var(--red)"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
-        <div class="tech-row"><span>PYTHON</span><div class="t-right"><span class="t-dot" style="background:var(--blue)"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
-        <div class="tech-row"><span>SECURITY</span><div class="t-right"><span class="t-dot" style="background:var(--gold)"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
-        <div class="tech-row"><span>LINUX</span><div class="t-right"><span class="t-dot" style="background:var(--ink)"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></div>
-      </div>
+      <h2 class="visually-hidden">Technologies I Work With</h2>
+      <ul class="tech-strip">
+        <li class="tech-row"><span>NEXT.JS</span><div class="t-right"><span class="t-dot" style="background:var(--red)" aria-hidden="true"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></div></li>
+        <li class="tech-row"><span>PYTHON</span><div class="t-right"><span class="t-dot" style="background:var(--blue)" aria-hidden="true"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></div></li>
+        <li class="tech-row"><span>SECURITY</span><div class="t-right"><span class="t-dot" style="background:var(--gold)" aria-hidden="true"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></div></li>
+        <li class="tech-row"><span>LINUX</span><div class="t-right"><span class="t-dot" style="background:var(--ink)" aria-hidden="true"></span><svg class="t-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></div></li>
+      </ul>
 
       <footer class="site-footer">
         <span>© 2026 SUJAL SUBEDI</span>
@@ -67,48 +142,57 @@
   </section>
 
   <!-- ============ CONNECT ============ -->
-  <section class="page" id="connect" hidden>
+  <section class="page" id="connect" aria-labelledby="connect-h2" hidden>
     <div class="wrap">
       <div class="hero">
         <div class="hero-text">
-          <p class="eyebrow"><span class="dot"></span>LET'S CONNECT</p>
-          <h1 class="headline" id="connect-h1" tabindex="-1">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>LET'S CONNECT</p>
+          <h2 class="headline" id="connect-h2" tabindex="-1">
             <span class="ln" data-ln="1">LET'S</span>
             <span class="ln" data-ln="2">CONNECT.<span class="period-dot" aria-hidden="true"></span></span>
-          </h1>
+          </h2>
           <p class="connect-copy">Have an idea, an opportunity, or just want to say hello? I'd love to hear from you.</p>
 
-          <div class="contact-list">
-            <a class="c-row" href="mailto:hello@sujalsubedi.name.np">
-              <div class="c-icon i-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
-              <div class="c-body">
-                <span class="c-label">WRITE TO ME</span>
-                <span class="c-value link">hello@sujalsubedi.name.np</span>
+          <h3 class="visually-hidden">Contact Information</h3>
+          <ul class="contact-list">
+            <li>
+              <a class="c-row" href="mailto:hello@sujalsubedi.name.np">
+                <div class="c-icon i-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+                <div class="c-body">
+                  <span class="c-label">WRITE TO ME</span>
+                  <span class="c-value link">hello@sujalsubedi.name.np</span>
+                </div>
+                <svg class="c-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="c-row" href="https://linkedin.com/in/sujalsubedi" target="_blank" rel="noopener noreferrer">
+                <div class="c-icon i-li" aria-hidden="true">in</div>
+                <div class="c-body">
+                  <span class="c-label">CONNECT WITH ME</span>
+                  <span class="c-value link">linkedin.com/in/sujalsubedi <span class="visually-hidden">(opens in a new tab)</span></span>
+                </div>
+                <svg class="c-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            </li>
+            <li>
+              <div class="c-row static">
+                <div class="c-icon i-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+                <div class="c-body">
+                  <span class="c-label">BASED IN</span>
+                  <span class="c-value">Kathmandu, Nepal</span>
+                </div>
               </div>
-              <svg class="c-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-            <a class="c-row" href="https://linkedin.com/in/sujalsubedi" target="_blank" rel="noopener">
-              <div class="c-icon i-li">in</div>
-              <div class="c-body">
-                <span class="c-label">CONNECT WITH ME</span>
-                <span class="c-value link">linkedin.com/in/sujalsubedi</span>
+            </li>
+            <li>
+              <div class="c-row static" style="border-bottom:none;">
+                <div class="c-icon i-clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+                <div class="c-body">
+                  <span class="c-value" style="font-size:13.5px;">Usually replies within 24–48 hours.</span>
+                </div>
               </div>
-              <svg class="c-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-            <div class="c-row static">
-              <div class="c-icon i-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
-              <div class="c-body">
-                <span class="c-label">BASED IN</span>
-                <span class="c-value">Kathmandu, Nepal</span>
-              </div>
-            </div>
-            <div class="c-row static" style="border-bottom:none;">
-              <div class="c-icon i-clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-              <div class="c-body">
-                <span class="c-value" style="font-size:13.5px;">Usually replies within 24–48 hours.</span>
-              </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <div class="hero-geo" aria-hidden="true"></div>
       </div>
@@ -122,6 +206,8 @@
 
 </main>
 
-<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

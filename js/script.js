@@ -299,7 +299,7 @@
       fromSec.hidden = true; toSec.hidden = false;
       current = target;
       window.scrollTo(0,0);
-      const h = toSec.querySelector("h1"); if(h) h.focus();
+      const h = toSec.querySelector(".headline"); if(h) h.focus();
       return;
     }
 
@@ -326,7 +326,7 @@
       })
       .to(overlay,{scale:0,duration:.55,ease:"power3.out"},"+=0.02")
       .eventCallback("onComplete",()=>{
-        const h = toSec.querySelector("h1"); if(h) h.focus({preventScroll:true});
+        const h = toSec.querySelector(".headline"); if(h) h.focus({preventScroll:true});
       });
   }
 

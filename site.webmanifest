@@ -1,0 +1,15 @@
+{
+  "name": "Sujal Subedi — Building Digital Experiences",
+  "short_name": "Sujal Subedi",
+  "start_url": "https://sujalsubedi.name.np/",
+  "display": "standalone",
+  "background_color": "#F5F1EA",
+  "theme_color": "#131210",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,93 +1,205 @@
-# Sujal Subedi — Portfolio
+# ✦ Client Portfolio Website
 
-> Personal portfolio and digital home of **Sujal Subedi** — software developer and cybersecurity student from Nepal.
+> A custom personal portfolio website designed and developed for a client — lightweight, responsive, accessible, and intentionally free from unnecessary complexity.
 
-**Live site:** [sujalsubedi.name.np](https://sujalsubedi.name.np)
-
-A lightweight, performance-focused portfolio built entirely with **HTML, CSS, and vanilla JavaScript**. No framework. No build pipeline. Just a fast, intentionally crafted web experience.
+🌐 **Live Website:** [sujalsubedi.name.np](https://sujalsubedi.name.np/)
 
 ---
 
-## Overview
+## 🧭 About the Project
 
-This repository contains the source code for my personal portfolio.
+This repository contains the source code for a **custom client portfolio website**.
 
-The site is designed to showcase my work, technical interests, projects, and ways to connect — while keeping the underlying stack deliberately simple.
+The project was built as a lightweight static website with a strong focus on:
 
-The entire experience runs as static files, making it easy to develop, deploy, maintain, and host almost anywhere.
+* Clean visual design
+* Responsive behavior
+* Smooth interaction
+* Accessibility
+* Search-engine readiness
+* Easy long-term maintenance
 
-### Built with
+The website deliberately avoids a heavy application stack.
 
-* **HTML5** — semantic structure, accessibility, and structured data
-* **CSS3** — responsive layouts, custom properties, fluid typography, and motion
-* **JavaScript** — navigation, transitions, focus management, and interaction
-* **GSAP + ScrollTrigger** — scroll-driven and ambient animations
-* **GitHub Pages** — deployment and custom-domain hosting
+Because not every portfolio needs a backend, a database, three microservices, and a Kubernetes cluster just to display someone's projects.
 
-No framework.
-No bundler.
-No application server.
-No database.
+Sometimes:
+
+```text
+HTML + CSS + JavaScript
+            ↓
+       a good website
+```
+
+And that is perfectly fine.
 
 ---
 
-## ✦ Features
+## ✨ Highlights
 
-### Responsive by design
+* 🎨 Custom-designed interface
+* 📱 Responsive across desktop, tablet, and mobile
+* ⚡ Lightweight static architecture
+* 🎞️ GSAP-powered motion
+* 🧭 Smooth section transitions
+* ♿ Accessibility considerations
+* 🔍 SEO-ready metadata and structured data
+* 🌐 Custom domain
+* 🚀 GitHub Pages deployment
+* 🧹 Minimal dependency footprint
 
-The interface adapts across desktop, tablet, and mobile without relying on a separate mobile application or layout.
+---
 
-### Accessible interactions
+## 🛠️ Technology Stack
 
-Accessibility is treated as part of the implementation rather than an afterthought.
+| Technology             | Purpose                                              |
+| ---------------------- | ---------------------------------------------------- |
+| **HTML5**              | Semantic structure and content                       |
+| **CSS3**               | Layout, styling, typography, and responsive behavior |
+| **Vanilla JavaScript** | Navigation, interaction, and UI behavior             |
+| **GSAP**               | Animation and motion                                 |
+| **ScrollTrigger**      | Scroll-based animations                              |
+| **GitHub Pages**       | Hosting and deployment                               |
+| **Custom Domain**      | `sujalsubedi.name.np`                                |
+
+### Why a static architecture?
+
+The website doesn't require:
+
+* a database
+* authentication
+* an API
+* server-side rendering
+* a content management system
+* a complicated build pipeline
+
+Keeping the architecture small makes the project easier to maintain and deploy.
+
+Less infrastructure.
+
+Less maintenance.
+
+Fewer opportunities for something to catch fire at 2 AM.
+
+---
+
+## 🎨 Design Direction
+
+The visual design was created specifically for the client's identity rather than relying on a generic portfolio template.
+
+The interface aims to balance:
+
+**professional**
+`+`
+**memorable**
+`+`
+**modern**
+`+`
+**a little personality**
+
+The result is intentionally more distinctive than a standard:
+
+> "Hello, I'm a developer. Here's my resume. Please hire me."
+
+There are enough of those already.
+
+---
+
+## ⚡ Features
+
+### Responsive Interface
+
+The layout adapts across different screen sizes using fluid sizing, responsive layouts, and viewport-aware typography.
+
+The goal is for the same design system to feel natural on:
+
+```text
+Desktop
+   ↓
+Laptop
+   ↓
+Tablet
+   ↓
+Mobile
+```
+
+without requiring a completely different website at every breakpoint.
+
+---
+
+### 🎞️ Motion & Interaction
+
+GSAP and ScrollTrigger provide the animation layer.
+
+Motion is used for:
+
+* entrance animations
+* section transitions
+* scroll interactions
+* ambient movement
+* pointer interactions
+
+The animations are there to support the design rather than compete with the content.
+
+In other words:
+
+> **The portfolio should move. The user shouldn't have to chase it.**
+
+---
+
+### ♿ Accessibility
+
+Accessibility is considered throughout the interface.
+
+The project includes:
 
 * Semantic HTML
 * Keyboard navigation
 * Skip navigation
 * Focus management
+* Accessible section transitions
 * Screen-reader considerations
-* Decorative SVGs hidden from assistive technology
-* `prefers-reduced-motion` support
+* Decorative SVG handling
+* Reduced-motion support
 
-### Lightweight architecture
+When a user prefers less motion, the interface respects that preference.
 
-The portfolio is intentionally static.
+The website can be dramatic without being annoying.
 
-There is no dependency installation or compilation required. The source can be served directly by any static web server.
+---
 
-### Motion & interaction
+### 🔍 SEO
 
-Animations are powered by GSAP and ScrollTrigger and are used to give the interface depth without turning the portfolio into an animation showcase.
+The project includes the core technical foundations required for search-engine discoverability:
 
-Users who prefer reduced motion receive a simplified, static experience.
-
-### SEO-ready
-
-The site includes:
-
+* `robots.txt`
+* `sitemap.xml`
 * Canonical URL
 * Meta description
 * Open Graph metadata
 * Twitter Card metadata
-* `robots.txt`
-* XML sitemap
 * JSON-LD structured data
 * `Person` schema
 * `WebSite` schema
 * Semantic heading hierarchy
 
+Because apparently the search engines also need an invitation.
+
 ---
 
-## Project structure
+## 📁 Project Structure
 
 ```text
 portfolio-ui/
 ├── assets/
 │   └── favicon.svg
+│
 ├── css/
 │   └── style.css
+│
 ├── js/
 │   └── script.js
+│
 ├── CNAME
 ├── index.html
 ├── robots.txt
@@ -96,93 +208,162 @@ portfolio-ui/
 └── README.md
 ```
 
-### Architecture
+The project is intentionally compact.
 
-The portfolio currently uses a single HTML document containing the site's sections.
+Small codebase.
 
-Navigation between the Home and Connect experiences is handled client-side through JavaScript rather than traditional routing. This keeps the project simple while allowing the interface to behave like a multi-view experience.
+Straightforward structure.
+
+Very little archaeology required.
 
 ---
 
-## Getting started
+## 🚀 Local Development
 
-Because there is no build process, getting the project running locally takes one command.
+No build system is required.
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/<your-repository>.git
+git clone <repository-url>
 cd portfolio-ui
+```
 
+Start a local static server:
+
+```bash
 python3 -m http.server 8000
 ```
 
-Then open:
+Open:
 
 ```text
 http://localhost:8000
 ```
 
-Any static HTTP server can be used instead.
+That's it.
 
-> Opening `index.html` directly also works for most of the site, but serving it locally is recommended for a more accurate development environment.
+No:
 
----
+```bash
+npm install
+```
 
-## Deployment
+No:
 
-The project is configured for **GitHub Pages** and includes a `CNAME` file for the custom domain.
+```bash
+npm run build
+```
 
-### GitHub Pages
+No:
 
-1. Push the repository to GitHub.
-2. Open **Settings → Pages**.
-3. Configure deployment from the appropriate branch.
-4. Configure the custom domain.
-5. Point the domain's DNS records to GitHub Pages.
-6. Wait for DNS propagation and HTTPS provisioning.
+```bash
+npm install
+```
 
-The production site is available at:
-
-**https://sujalsubedi.name.np**
-
-The repository can also be deployed to other static hosting platforms such as Netlify, Vercel, or Cloudflare Pages. When doing so, the `CNAME` file should be removed or ignored and the custom domain configured through the hosting provider.
+followed by an error that somehow requires deleting `node_modules` and questioning every decision that led to this point.
 
 ---
 
-## Development philosophy
+## 🌐 Deployment
 
-This portfolio follows a simple principle:
+The production website is hosted using **GitHub Pages**.
 
-> **The technology should support the experience, not become the experience.**
+### Production
 
-A personal portfolio does not need a complex application stack to be effective.
+**→ [sujalsubedi.name.np](https://sujalsubedi.name.np/)**
 
-Keeping the site static means:
+The repository includes a `CNAME` file for the custom domain configuration.
 
-* fewer moving parts
-* faster load times
-* easier maintenance
-* simpler deployment
-* minimal attack surface
-* no runtime backend
-* no database
-* no unnecessary dependencies
+The site can also be deployed to other static hosting services such as:
 
-The complexity belongs in the work being showcased — not in the portfolio itself.
+* Cloudflare Pages
+* Netlify
+* Vercel
+
+The architecture is portable by design.
 
 ---
 
-## Status
+## 🧩 Development Environment
 
-**Live and actively maintained.**
+The project is developed and maintained primarily on:
 
-The portfolio will continue to evolve alongside my projects, skills, and technical interests.
+```text
+OS       → Arch Linux
+Desktop  → Hyprland
+Editor   → VS Code
+Terminal → Kitty
+```
+
+The website itself does not require Arch Linux.
+
+The developer apparently does.
 
 ---
 
-## License
+## 📌 Project Status
 
-Copyright © Sujal Subedi.
+🟢 **LIVE**
 
-All rights reserved unless otherwise stated.
+The project is currently deployed and maintained for the client.
 
-The source code is publicly visible for educational and reference purposes, but the site's content, branding, design, assets, and personal information may not be reused without permission.
+Future updates may include design refinements, content updates, accessibility improvements, and additional polish as the client's needs evolve.
+
+Because apparently websites are never truly finished.
+
+They just enter **maintenance mode**.
+
+---
+
+## 🤝 Client Project
+
+This repository represents a **client-developed website**.
+
+The visual identity, content, branding, and personal information belong to the client.
+
+The source code is maintained as part of the project's development workflow and should not be treated as a reusable template or starter kit.
+
+---
+
+## ⭐ Made it to the bottom?
+
+Respect.
+
+You have successfully reviewed the architecture, survived the jokes, and avoided opening `node_modules`.
+
+There is only one thing left to do.
+
+<p align="center">
+
+### ⭐ [Star the repository](https://github.com/KarlowsMorris/Portfolio-ui)
+
+</p>
+
+It costs approximately:
+
+**$0.00**
+
+and takes:
+
+**~1 second**
+
+while providing:
+
+**+1 tiny dopamine particle**
+
+A fairly good deal.
+
+> **Your star → better discoverability → happy developer → probably more CSS**
+
+A beautiful ecosystem.
+
+---
+
+<p align="center">
+
+### Built with HTML, CSS, JavaScript, GSAP & an unreasonable commitment to making things look nice.
+
+<sub>Client project • Designed for simplicity • Built to last</sub>
+
+</p>

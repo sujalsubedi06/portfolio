@@ -251,8 +251,8 @@ ul{list-style:none;margin:0;padding:0;}
   .logo{font-size:12px;}
   .hero{min-height:auto;flex-direction:column;align-items:flex-start;padding-top:8px;}
   .hero-geo{
-    position:absolute;top:6%;right:-24%;
-    width:78vw;z-index:0;transform:none;
+    position:absolute;top:6%;right:-8%;
+    width:60vw;z-index:0;transform:none;
   }
   .hero-text{max-width:100%;}
   .headline{font-size:clamp(2.4rem,10vw,3.1rem);}
@@ -262,4 +262,78 @@ ul{list-style:none;margin:0;padding:0;}
   .tech-row:last-child{border-bottom:none;}
   .tech-row .t-chev{display:block;}
   .site-footer{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+
+/* ---------- PHONES ---------- */
+@media (max-width:600px){
+  .wrap{padding-inline:16px;}
+
+  /* --- NAV --- */
+  :root{--nav-h:60px;}
+  .navbar{top:10px;width:min(1360px,94vw);}
+  .nav-inner{padding:10px 6px 10px 14px;gap:8px;}
+  .logo{font-size:11px;letter-spacing:.14em;gap:7px;}
+  .nav-deco{display:none;}
+  .nav-cta{padding:9px 14px;font-size:10px;letter-spacing:.12em;}
+
+  /* --- HERO --- */
+  .hero{padding-top:4px;padding-bottom:20px;}
+  .hero-geo{
+    position:relative;top:auto;right:auto;
+    width:65vw;margin:-10px 0 10px auto;
+    transform:none;
+  }
+  .eyebrow{font-size:11px;margin-bottom:16px;}
+  .headline{font-size:2rem;margin-bottom:20px;}
+  .period-dot{width:7px;height:7px;margin-left:5px;transform:translateY(-10px);}
+  .sub{font-size:14px;line-height:1.6;margin-bottom:26px;}
+  .btn-primary{padding:14px 22px;font-size:11px;}
+
+  /* --- TECH STRIP --- */
+  .tech-strip{margin-top:16px;}
+  .tech-row{padding:16px 2px;font-size:12px;letter-spacing:.12em;}
+  .tech-row .t-dot{width:6px;height:6px;}
+
+  /* --- FOOTER --- */
+  .site-footer{padding:20px 16px 32px;font-size:10.5px;}
+
+  /* --- CONNECT PAGE --- */
+  .headline{font-size:2rem;}
+  .connect-copy{font-size:14px;margin-bottom:28px;}
+  .contact-list{max-width:100%;}
+  .c-row{padding:16px 0;gap:12px;}
+  .c-icon{width:30px;height:30px;border-radius:8px;}
+  .c-icon svg{width:14px;height:14px;}
+  .c-label{font-size:9.5px;letter-spacing:.14em;margin-bottom:4px;}
+  .c-value{font-size:14px;}
+  .c-arrow{width:13px;height:13px;}
+  .c-row.static .c-value{font-size:13px;}
+}
+
+/* ---------- TINY PHONES ---------- */
+@media (max-width:380px){
+  .wrap{padding-inline:14px;}
+
+  .navbar{top:8px;width:96vw;}
+  .nav-inner{padding:8px 4px 8px 10px;gap:6px;}
+  .logo{font-size:10px;}
+  .nav-cta{padding:8px 10px;font-size:9px;}
+  .nav-cta svg{width:11px;height:11px;}
+
+  .hero-geo{width:80vw;margin-top:0;}
+  .eyebrow{font-size:10px;gap:7px;margin-bottom:12px;}
+  .eyebrow .dot{width:5px;height:5px;}
+  .headline{font-size:1.7rem;}
+  .period-dot{width:6px;height:6px;margin-left:4px;transform:translateY(-8px);}
+  .sub{font-size:13px;}
+  .btn-primary{padding:12px 18px;font-size:10px;gap:8px;}
+  .btn-primary svg{width:12px;height:12px;}
+
+  .tech-row{padding:14px 2px;font-size:11px;}
+  .site-footer{padding:18px 14px 28px;font-size:10px;}
+
+  .c-row{padding:14px 0;gap:10px;}
+  .c-icon{width:28px;height:28px;}
+  .c-label{font-size:9px;}
+  .c-value{font-size:13px;}
 }
